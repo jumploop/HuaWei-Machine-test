@@ -33,14 +33,14 @@ String
 复制
 2 2 3 3 5
 """
-
+# 方法一
 a, res = int(input()), []
 for i in range(2, a // 2 + 1):# a除以比a/2大的数，结果是1点几，肯定不是一个因子。a//2表示取整数，range函数不会到a//2，所以要在后面加上1
     while a % i == 0:
         a = a / i
         res.append(i)
 print(" ".join(map(str, res)) + " " if res else str(a) + " ")
-
+# 方法二
 while True:
     try:
         a = int(input())
