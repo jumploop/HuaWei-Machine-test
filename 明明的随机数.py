@@ -61,11 +61,16 @@ OutputArray    输出处理后的随机整数
 400
 """
 
-while True:
-    try:
-        a, res = int(input()), set()
-        for i in range(a): res.add(int(input()))
-        for i in sorted(res): print(i)
-    except:
-        break
 
+def main():
+    while True:
+        try:
+            a, res = int(input()), set()
+            for i in range(a): res.add(int(input()))
+            for i in sorted(res): print(i)
+        except:
+            break
+
+
+if __name__ == '__main__':
+    main()
