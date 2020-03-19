@@ -119,7 +119,7 @@ def isLegalMaskCode(Mask):
     if not isLegalIP(Mask):
         return False
 
-    binaryMask = "".join(map(lambda x: bin(int(x))[2:].zfill(8), Mask.split(".")))
+    binaryMask = "".join(map(lambda x: "{0:08b}".format(int(x)), Mask.split(".")))
     indexOfFirstZero = binaryMask.find("0")
     indexOfLastOne = binaryMask.rfind("1")
     if indexOfLastOne > indexOfFirstZero:
