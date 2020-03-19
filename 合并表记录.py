@@ -30,6 +30,7 @@
 3 4
 
 """
+from operator import itemgetter
 
 
 def main():
@@ -45,6 +46,8 @@ def main():
         n -= 1
     for k, v in sorted(result.items(), key=lambda x: x[0]):
         print(k, v, sep=" ")
+    # for k, v in sorted(result.items(), key=itemgetter(0)):
+    #     print(k, v, sep=" ")
 
 
 if __name__ == '__main__':
