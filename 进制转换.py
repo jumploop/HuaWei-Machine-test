@@ -21,8 +21,14 @@
 10
 """
 
-while True:
-    try:
-        print(int(input(), 16))
-    except:
-        break
+
+def main():
+    while True:
+        try:
+            print(int(input(), 16))
+        except:
+            break
+
+
+if __name__ == '__main__':
+    main()
