@@ -37,7 +37,7 @@ fpgadrive.c 1325 1
 import sys
 
 
-def main():
+def method():
     errors = {}
     files = []
     for line in sys.stdin:
@@ -56,6 +56,31 @@ def main():
         vec = mark.split("_")
         file = vec[0]
         print("%s %s %s" % (file, vec[1], errors[mark]))
+
+
+def method2():
+    error = dict()
+    files = []
+    while True:
+        try:
+            file_num = input().strip().split('\\')[-1].split()
+            filename = file_num[0] if len(file_num[0]) < 16 else file_num[0][-16:]
+            line_no = file_num[1]
+            record = ' '.join((filename, line_no))
+            if record not in error:
+                error[record] = 1
+                files.append(record)
+            else:
+                error[record] += 1
+        except:
+            break
+    for i in files[-8:]:
+        print(' '.join(i.split()), error[i])
+
+
+def main():
+    method()
+    # method2()
 
 
 if __name__ == '__main__':
