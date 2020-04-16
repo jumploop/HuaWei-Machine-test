@@ -29,7 +29,5 @@ def main():
     length = len(set([i for i in input_string if ord(i) in range(128)]))
     print(length)
 
-
 if __name__ == '__main__':
     main()
-
