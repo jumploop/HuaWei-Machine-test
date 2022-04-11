@@ -27,10 +27,7 @@ from math import ceil, floor
 
 def round_number(num):
     num_list = str(num).split(".")
-    if int(num_list[1][0]) >= 5:
-        return ceil(num)
-    else:
-        return floor(num)
+    return ceil(num) if int(num_list[1][0]) >= 5 else floor(num)
 
 
 def main():

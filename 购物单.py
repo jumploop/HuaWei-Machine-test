@@ -49,8 +49,8 @@ def main():
     N, m = map(int, input().split())
     f = [0] * N  # 购物单总价值
     # 分组背包，每组有四种情况，a.主件 b.主件+附件1 c.主件+附件2 d.主件+附件1+附件2
-    v = [[0 for i in range(4)] for j in range(m + 1)]  # 每组的资金
-    w = [[0 for i in range(4)] for j in range(m + 1)]  # 每组的重要度
+    v = [[0 for _ in range(4)] for _ in range(m + 1)]
+    w = [[0 for _ in range(4)] for _ in range(m + 1)]
 
     N = N // 10  # 价格为10的整数倍，节省时间
     for i in range(1, m + 1):

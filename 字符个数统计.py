@@ -26,7 +26,7 @@ abc
 
 def main():
     input_string = input()
-    length = len(set([i for i in input_string if ord(i) in range(128)]))
+    length = len({i for i in input_string if ord(i) in range(128)})
     print(length)
 
 if __name__ == '__main__':
