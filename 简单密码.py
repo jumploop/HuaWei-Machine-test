@@ -38,10 +38,7 @@ def main():
             res = ''
             for i in password:
                 if i.isupper():
-                    if i == 'Z':
-                        res += 'a'
-                    else:
-                        res += chr(ord(i) + 1).lower()
+                    res += 'a' if i == 'Z' else chr(ord(i) + 1).lower()
                 elif i in 'abc':
                     res += '2'
                 elif i in 'def':

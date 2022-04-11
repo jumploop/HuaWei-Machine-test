@@ -45,7 +45,7 @@ def method():
         file = vec[0].split("\\")[-1]
         filename = file if len(file) < 16 else file[-16:]
         line_no = vec[1]
-        mark = "%s_%s" % (filename, line_no)
+        mark = f"{filename}_{line_no}"
         if mark not in files:
             files.append(mark)
             errors[mark] = 1
@@ -55,11 +55,11 @@ def method():
     for mark in files[-8:]:
         vec = mark.split("_")
         file = vec[0]
-        print("%s %s %s" % (file, vec[1], errors[mark]))
+        print(f"{file} {vec[1]} {errors[mark]}")
 
 
 def method2():
-    error = dict()
+    error = {}
     files = []
     while True:
         try:

@@ -104,9 +104,8 @@ def isPrivateIP(IP):
     nums = IP.split(".")
     if int(nums[0]) == 10:
         return True
-    if int(nums[0]) == 172:
-        if 31 >= int(nums[1]) >= 16:
-            return True
+    if int(nums[0]) == 172 and 31 >= int(nums[1]) >= 16:
+        return True
     if int(nums[0]) == 192 and int(nums[1]) == 168:
         return True
 
@@ -141,17 +140,16 @@ def main():
                 cat = CatagoryIP(IP)
                 if cat == "A":
                     A += 1
-                if cat == "B":
+                elif cat == "B":
                     B += 1
-                if cat == "C":
+                elif cat == "C":
                     C += 1
-                if cat == "D":
+                elif cat == "D":
                     D += 1
-                if cat == "E":
+                elif cat == "E":
                     E += 1
     except:
         print(A, B, C, D, E, Err, P)
-        pass
 
 
 if __name__ == '__main__':

@@ -31,10 +31,7 @@ def count_char_num(string, char):
     :param char: 一个字符
     :return:包含的字符个数
     """
-    if char.isupper():
-        string = string.upper()
-    else:
-        string = string.lower()
+    string = string.upper() if char.isupper() else string.lower()
     counter = Counter(string)
     return counter[char]
 
